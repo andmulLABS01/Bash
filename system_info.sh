@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#The purporse of this script is to Provide a menu for users about what information they want to check.
+#The purpose of this script is to provide a menu for users about what information they want to check.
 #Andrew Mullen - 9/12/23
 
 
-#Put in a loop statement to contiune until the user exits.
+#Put in a loop statement to continue until the user exits.
 while true; do
 
 #Display the menu
@@ -22,11 +22,11 @@ while true; do
 	echo "11. Currently running processes"
 	echo "12. Exit"
 
-#record the users selection into the variable "choice"
+#Record the users' selection into the variable "choice"
 	read -p "Choose an option: " choice
  
 
-#Use the case statement to exicute the command based on the user's choice. Add error catching
+#Use the case statement to execute the command based on the user's choice. Add error catching
 	case $choice in
 	  1)
 		who
@@ -75,7 +75,7 @@ while true; do
   read -p "Do you want to continue? (y/n) " continue
 
 #If the user's choice is not 'y', exit the script.
-  if [ "$continue" != "y" ]; then
+  if [ "$continue" != "y" -o "$continue" != "Y" ]; then
     echo "Exiting..."
     exit 0
   fi
