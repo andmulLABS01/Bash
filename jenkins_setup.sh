@@ -4,16 +4,19 @@
 #First update and upgrade the system
 sudo apt update
 sudo apt upgrade
-echo 
+echo "
 
 #enter the wait command to finish the update
 wait
+echo "System updated and upgraded"
 
-# Download Java runtime environment
+# Download Java runtime environment 
 sudo apt install fontconfig openjdk-17-jre
+echo "y"
 
 #enter wait command finish the install
 wait
+echo "Java installed"
 
 #This is the Debian package repository of Jenkins to automate installation and upgrade.
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \/usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -29,24 +32,28 @@ wait
 
 #install Jenkins
 sudo apt install jenkins
+echo "JENKINS INSTALLED"
 
 #install python3.10-venv
 sudo apt install python3.10-venv
+echo "PHTHON3.10-VENV INSTALLED"
 
 #install python-pip
 sudo apt install python-pip
+echo "PYTHON-PIP INSTALLED"
 
 #install unzip
 sudo apt install unzip
+echo "UNZIP INSTALLED"
 
 #enter wait command finish the install
 wait
 
 #run command to check the status of Jenkins How do I check if it is running? looking for [Active: active (running)]. What should I do if it's not?
-systemctl status jenkins
+#systemctl status jenkins
 
 #exit out of systemctl
-q
+#q
 
 #how to pull unlock code? Do we use haystack example to find the file if this directory changes
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
