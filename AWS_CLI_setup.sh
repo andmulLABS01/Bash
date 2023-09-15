@@ -15,8 +15,8 @@ aws --version
 sleep 10
 
 # Set AWS access keys, region, and output
-aws configure set aws_access_key_id AKIA5WNJTCQSCMZWXVNA
-aws configure set aws_secret_access_key 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
+aws configure set aws_access_key_id 
+aws configure set aws_secret_access_key 
 aws configure set default.region us-east-1
 aws configure set default.output json
 
