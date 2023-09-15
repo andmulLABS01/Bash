@@ -3,16 +3,14 @@
 
 #First update and upgrade the system
 sudo apt update
-sudo apt upgrade
-echo "
+sudo apt upgrade -y
 
 #enter the wait command to finish the update
 wait
 echo "System updated and upgraded"
 
 # Download Java runtime environment 
-sudo apt install fontconfig openjdk-17-jre
-echo "y"
+sudo apt-get install -y fontconfig openjdk-17-jre
 
 #enter wait command finish the install
 wait
@@ -33,18 +31,22 @@ wait
 #install Jenkins
 sudo apt install jenkins
 echo "JENKINS INSTALLED"
+sleep 5
 
 #install python3.10-venv
 sudo apt install python3.10-venv
 echo "PHTHON3.10-VENV INSTALLED"
+sleep 5
 
-#install python-pip
-sudo apt install python-pip
-echo "PYTHON-PIP INSTALLED"
+#install python3-pip
+sudo apt install python3-pip
+echo "PYTHON3-PIP INSTALLED"
+sleep 5
 
 #install unzip
-sudo apt install unzip
+sudo apt install -y unzip
 echo "UNZIP INSTALLED"
+sleep 5
 
 #enter wait command finish the install
 wait
