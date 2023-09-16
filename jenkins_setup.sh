@@ -8,6 +8,7 @@ sudo apt upgrade -y
 #enter the wait command to finish the update
 wait
 echo "System updated and upgraded"
+sleep 10
 
 # Download Java runtime environment 
 sudo apt-get install -y fontconfig openjdk-17-jre
@@ -15,6 +16,7 @@ sudo apt-get install -y fontconfig openjdk-17-jre
 #enter wait command finish the install
 wait
 echo "Java installed"
+sleep 10
 
 #This is the Debian package repository of Jenkins to automate installation and upgrade.
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \/usr/share/keyrings/jenkins-keyring.asc > /dev/null
@@ -58,6 +60,6 @@ wait
 #q
 
 #how to pull unlock code? Do we use haystack example to find the file if this directory changes
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword > pw.txt
 
 #copy password
