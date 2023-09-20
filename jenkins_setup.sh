@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #First update and upgrade the system
 sudo apt update
 sudo apt upgrade -y
@@ -59,7 +58,7 @@ wait
 #exit out of systemctl
 #q
 
-#how to pull unlock code? Do we use haystack example to find the file if this directory changes
+#Put code into another file to be read
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword > pw.txt
 
 #copy password
