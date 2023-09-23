@@ -67,16 +67,27 @@ while true; do
 		;;
 	  *)
 		echo "Invalid option. Please choose a valid option (1-12)."
-		continue #error handling
+		continue 
+		#Continue the loop to prompt the user again.
 		;;
 	esac
 
-#Ask the user if they want to continue. Record the users choice into 'continue'.
-  read -p "Do you want to continue? (y/n) " continue
+#Ask the user if they want to continue. Record the users choice into continue.
+ while true; do
+ read -p "Do you want to continue? (y/n) " continue
 
-#If the user's choice is not 'y', exit the script.
-  if [ "$continue" != "y" -o "$continue" != "Y" ]; then
-    echo "Exiting..."
-    exit 0
-  fi
+    # Convert user input to lowercase and check for 'y' or 'n'.
+    choice="${continue,,}"  # Convert to lowercase.
+
+    if [ "$choice" == "y" ]; then
+      break  
+# Exit the inner loop and continue with the menu.
+    elif [ "$choice" == "n" ]; then
+      echo "Exiting..."
+      exit 0  
+# Exit the script.
+    else
+      echo "Invalid input. Please enter 'y' or 'n'."
+    fi
+  done
 done
