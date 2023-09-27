@@ -1,4 +1,4 @@
 # Bash
 Bash_scripts
 
-Here are my Bash Scripts for Kura Labs
+Here are my Bash scripts for Kura Labs.  They are living work-in-progress scripts. 
