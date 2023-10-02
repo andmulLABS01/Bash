@@ -49,6 +49,11 @@ sudo apt install -y unzip
 echo "UNZIP INSTALLED"
 sleep 5
 
+#install nginx
+sudo apt install -y nginx
+echo "NGINX INSTALLED"
+sleep 5
+
 #enter wait command finish the install
 wait
 
