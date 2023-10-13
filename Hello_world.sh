@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Hello World"
-sudo apt install stress-ng
+sudo apt install -y stress-ng
